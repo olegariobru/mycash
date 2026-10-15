@@ -1,10 +1,10 @@
-# Clareza Financeira
+# mycash
 
-Aplicativo desktop para Windows, criado em Python, para controlar uma meta mensal, registrar despesas e arquivar DANFEs, notas fiscais e comprovantes. Não usa navegador, servidor ou conta online.
+Aplicativo desktop para Windows, criado em Python, para controlar metas e despesas separadas por mês e arquivar DANFEs, notas fiscais e comprovantes. Não usa navegador, servidor ou conta online.
 
 ## Executar
 
-Para gerar localmente, execute `build_exe.bat` e depois abra `dist/Clareza Financeira.exe`. No GitHub, a automação **Build Windows** também disponibiliza o executável na área de artefatos da execução. Na primeira abertura, o programa cria sua pasta local de dados.
+Para gerar localmente, execute `build_exe.bat` e depois abra `dist/mycash.exe`. No GitHub, a automação **Build Windows** também disponibiliza o executável na área de artefatos da execução. Na primeira abertura, o programa cria sua pasta local de dados.
 
 ## O que cada parte faz
 
@@ -37,7 +37,7 @@ Assim, o visual não depende das fontes instaladas no Windows.
 
 ### `build_exe.bat`
 
-Cria o ambiente Python, instala PyInstaller e PySide6 6.8.3 e recompila o executável. O resultado fica em `dist/Clareza Financeira.exe`.
+Cria o ambiente Python, instala PyInstaller e PySide6 6.8.3 e recompila o executável. O resultado fica em `dist/mycash.exe`.
 
 ### `dist/`
 
@@ -72,7 +72,7 @@ python desktop.py
 Para validar o pacote sem abrir a janela:
 
 ```powershell
-dist\Clareza Financeira.exe --self-test
+dist\mycash.exe --self-test
 ```
 
 ## Licenças
