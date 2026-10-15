@@ -1,0 +1,28 @@
+name: Build Windows
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+      - name: Baixar fontes
+        run: python scripts/download_fonts.py
+      - name: Compilar executável
+        run: pyinstaller --noconfirm --clean --onefile --windowed --add-data "assets;assets" --name "Clareza Financeira" desktop.py
+      - name: Publicar artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: Clareza-Financeira-Windows
+          path: dist/Clareza Financeira.exe
+
