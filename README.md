@@ -4,7 +4,7 @@ Aplicativo desktop para Windows, criado em Python, para controlar uma meta mensa
 
 ## Executar
 
-Abra `dist/Clareza Financeira.exe`. Na primeira execução, o programa cria uma pasta `dados` ao lado do executável.
+Para gerar localmente, execute `build_exe.bat` e depois abra `dist/Clareza Financeira.exe`. No GitHub, a automação **Build Windows** também disponibiliza o executável na área de artefatos da execução. Na primeira abertura, o programa cria sua pasta local de dados.
 
 ## O que cada parte faz
 
